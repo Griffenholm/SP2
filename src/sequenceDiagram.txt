@@ -1,0 +1,38 @@
+@startuml
+
+class Author{
+- String name
+- ArrayList<Title<titles
++ Author(String name)
++ void addTitile(Title)
++ float calculate TotalPay()
+}
+
+abstract class Title{
+- String title
+- String literatureType
+# int copies
+# double rate
++ Title(String title, String literatureType, int copies)
++ double calculateLiteraturePoints()
+# double calculate Points()
+# double calculateLiteraturePoints()
+}
+
+class AudioBook extends Title{
+- int durationInMinutes
++ AudioBooks(String title, String literatureType, int copies, int durationInMinutes)
+# double calculatePoints()
+# double calculateLiteraturePoints()
+}
+
+class PrintedBook extends Title{
+- int pages
++ PrintedBook(String title. String literatureType, int copies,int pages)
+# double calculatePoints()
+# double calculateLiteraturePoints()
+}
+
+Author *--Title
+
+@enduml
